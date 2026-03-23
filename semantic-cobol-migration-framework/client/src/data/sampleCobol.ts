@@ -1,0 +1,14 @@
+export const sampleCobol = `       IDENTIFICATION DIVISION.
+       PROGRAM-ID. CUSTINQ.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-CUSTOMER-ID         PIC 9(9).
+       01 WS-CUSTOMER-NAME       PIC X(50).
+       PROCEDURE DIVISION.
+       MAIN-PARA.
+           ACCEPT WS-CUSTOMER-ID.
+           PERFORM FETCH-CUSTOMER.
+           DISPLAY WS-CUSTOMER-NAME.
+           STOP RUN.
+       FETCH-CUSTOMER.
+           MOVE 'DEMO CUSTOMER' TO WS-CUSTOMER-NAME.`;
